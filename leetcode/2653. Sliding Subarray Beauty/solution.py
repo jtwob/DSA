@@ -4,7 +4,6 @@ class Solution:
         for i in range(0, len(nums)-k+1):
             negatives = []
             for j in range(i, i+k):
-                print(nums[j])
                 if(nums[j] < 0):
                     negatives.append(nums[j])
             if(len(negatives) >= x):
