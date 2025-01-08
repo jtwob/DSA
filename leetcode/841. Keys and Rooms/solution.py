@@ -1,16 +1,12 @@
 class Solution:
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         queue = [0]
-        visited = []
+        visited = set()
         while len(queue) != 0:
             newRoom = queue.pop()
             if(newRoom not in visited):     
                 nextRooms = rooms[newRoom]
-                visited.append(newRoom)
-                for i in range(len(nextRooms)):
-                    queue.append(nextRooms[i])
+                visited.add(newRoom)
+                queue.extend(rooms[newRoom])
             
-        if len(visited) < len(rooms):
-            return False
-        else:
-            return True
+        return len(visited) == len(rooms)
