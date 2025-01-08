@@ -1,5 +1,3 @@
-
-from collections import deque
 from bisect import insort, bisect_left
 
 class Solution:
