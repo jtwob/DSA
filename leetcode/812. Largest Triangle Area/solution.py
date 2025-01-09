@@ -30,9 +30,14 @@ class Solution:
         # Prelim algorithm
         # Recursively calculate areas from all points
         # Return max
-        max = self.calcArea([points[0], points[1], points[2]])
+
+        max = 0
+
+        for i in range(len(points)):
+            for j in range(i, len(points)):
+                for k in range(j, len(points)):
+                    area = self.calcArea([points[i], points[j], points[k]])
+                    if area > max:
+                        max = area
         return max
     
-
-
-
