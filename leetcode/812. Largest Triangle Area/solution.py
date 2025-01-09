@@ -1,6 +1,32 @@
 class Solution:
+
+    def calcArea(self, points: List[List[int]]) -> float:
+        x1 = points[0][0]
+        x2 = points[1][0]
+        x3 = points[2][0]
+        y1 = points[0][1]
+        y2 = points[1][1]
+        y3 = points[2][1]
+
+        base = pow(pow(x1-x2, 2) + pow(y1-y2, 2), 0.5)
+        m_base = (y1-y2)/(x1-x2)
+        b_base = y1 - m_base * x1
+        m_height = -1/m_base
+        b_height = y3 - m_height * x3
+        x_intercept = (b_height - b_base) / (m_base - m_height)
+        y_intercept = m_base * x_intercept + b_base
+
+        h = pow(pow(x_intercept-x3, 2) + pow(y_intercept-y3, 2), 0.5)
+
+        return 0.5 * base * h
+    
     def largestTriangleArea(self, points: List[List[int]]) -> float:
         # Prelim algorithm
         # Recursively calculate areas from all points
         # Return max
-        return 0
+        max = self.calcArea([points[0], points[1], points[2]])
+        return max
+    
+
+
+
