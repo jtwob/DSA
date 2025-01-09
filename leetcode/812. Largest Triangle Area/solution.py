@@ -24,7 +24,9 @@ class Solution:
 
         h = pow(pow(x_intercept-x3, 2) + pow(y_intercept-y3, 2), 0.5)
 
-        return 0.5 * base * h
+        area = 0.5 * base * h
+        print(base, h, "p1 (", x1, ",",y1,")", "p2 (", x2, ",",y2,")", "p3 (", x3, ",",y3,")", area)
+        return area
     
     def largestTriangleArea(self, points: List[List[int]]) -> float:
         # Prelim algorithm
