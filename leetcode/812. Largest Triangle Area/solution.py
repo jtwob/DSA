@@ -12,7 +12,7 @@ class Solution:
         x_intercept = 0
 
         base = pow(pow(x1-x2, 2) + pow(y1-y2, 2), 0.5)
-        if x1 != 0 and x2 != 0:
+        if x1 != x2:
             m_base = (y1-y2)/(x1-x2)
         b_base = y1 - m_base * x1
         if m_base != 0:
