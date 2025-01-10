@@ -36,7 +36,9 @@ class Solution:
         
         if y1 == y2:
             base = abs(x1-x2)
+            height = abs(y3-y1)
         if x1 == x2:
+            base = abs(y1-y2)
             height = abs(x3-x2)
 
         area = 0.5 * base * height
