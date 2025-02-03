@@ -1,0 +1,1 @@
+# Strategy: Take the sum of values in rolls[], and determine the target sum to achieve the target mean over m + n elements. The sum of the remaining values must be n * target_avg. this will result in a target for the output array that either can or cannot be obtained.
